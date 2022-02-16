@@ -464,16 +464,16 @@ class Jogador {
 			map.pass_local();
 			map.batalha(lagarto_humanoide);
 		}else if(ciclo.periodo==="Tarde" && map.armazena_local==="Colina dos Carneiros"){
-				console.log("Um grupo de ladrões se aproxima!");
-				ciclo.passTempo();
-				map.pass_local();
-				map.batalha(grupo_de_ladrões);
+			console.log("Um grupo de ladrões se aproxima!");
+			ciclo.passTempo();
+			map.pass_local();
+			map.batalha(grupo_de_ladrões);
 		}else if(map.armazena_regiao==="Vale do Esquecimento"){
-					jogo.narrativa2
-					ciclo.passTempo();
-					map.pass_local();
-					map.batalha(troll_da_floresta);
-					controle++;
+			jogo.narrativa2
+			ciclo.passTempo();
+			map.pass_local();
+			map.batalha(troll_da_floresta);
+			jogo.controle++;
 		}else{
 			console.log("Nenhum perigo por enquanto.Você avança!")
 			ciclo.passTempo();
@@ -585,12 +585,6 @@ const troll_da_floresta = new Inimigo("troll_da_floresta",100,22,5);
 			jogo.controle2++;
 		}
 
-
 	}while(jogo.controle==0);
 	
-	
-
 }while(jogo.controle2==0);
-
-
-
