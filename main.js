@@ -565,7 +565,7 @@ const troll_da_floresta = new Inimigo("troll_da_floresta",100,22,5);
 		jogo.criar_personagem();
 		jogo.controle++;
 	}while(jogo.controle==0)
-	jogador.controle=0;
+	jogador.controle=0;jogo.
 	do{
 		jogador.menu_acoes();
 	}while(controle==0)
@@ -588,7 +588,7 @@ const troll_da_floresta = new Inimigo("troll_da_floresta",100,22,5);
 	
 	
 
-}while(controle2==0);
+}while(jogo.controle2==0);
 
 
 
