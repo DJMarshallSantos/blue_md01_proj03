@@ -481,33 +481,34 @@ class Jogador {
 	}		
 	
 	// Função que apresenta um menu de opções sobre as ações do jogador
-	menu_acoes(){
-		jogador.status();		
+	menu_acoes(){		
 		jogo.controle=0;
 	do{	
-	console.log("Você gostaria de tomar que atitude?");
-	console.log("[1] Para seguir viagem");
-	console.log("[2] para abrir Loja de bolso");
-	console.log("[3] para ver estatus geral")
-	console.log("[4] para abrir a bolsa");
-	console.log("[5] para sair do jogo");
-	jogo.leitor = +prompt("Digite a opção desejada:");
-	//console.log(jogador.leitor);
-	
-	if (jogo.leitor===1){
-	jogador.avancar();
-	}else if(jogo.leitor===2){
-	jogador.loja_bolso();
-	}else if(jogo.leitor===3){
-		jogador.status_geral();
-	}else if(jogo.leitor==4){
-		jogador.bolsa();
-	}else{
-	console.log("você saiu do jogo!!!")
-	jogo.controle++;
-	}
-	prompt("Tecle ENTER para continuar:");
-	console.clear();
+		jogador.status();
+		console.log("-----------------------------------");
+		console.log("Você gostaria de tomar que atitude?");
+		console.log("[1] Para seguir viagem");
+		console.log("[2] para abrir Loja de bolso");
+		console.log("[3] para ver estatus geral")
+		console.log("[4] para abrir a bolsa");
+		console.log("[5] para sair do jogo");
+		jogo.leitor = +prompt("Digite a opção desejada:");
+		//console.log(jogador.leitor);
+		
+		if (jogo.leitor===1){
+			jogador.avancar();
+		}else if(jogo.leitor===2){
+			jogador.loja_bolso();
+		}else if(jogo.leitor===3){
+			jogador.status_geral();
+		}else if(jogo.leitor==4){
+			jogador.bolsa();
+		}else{
+			console.log("você saiu do jogo!!!");
+			jogo.controle++;
+		}
+		prompt("Tecle ENTER para continuar:");
+		console.clear();
 	}while(jogo.controle==0)	 // alterado hoje
 	
 } 
@@ -564,24 +565,24 @@ const troll_da_floresta = new Inimigo("troll_da_floresta",100,22,5);
 	do{
 		jogo.criar_personagem();
 		jogo.controle++;
-	}while(jogo.controle==0)
-	jogador.controle=0;jogo.
+	}while(jogo.controle==0);
+	jogo.controle=0;
 	do{
 		jogador.menu_acoes();
-	}while(controle==0)
+	}while(jogo.controle==0);
 
 	jogo.narrativa_final();
 	jogo.leitor=0;
 	jogo.controle=0;
 	
 	do{
-	console.log("Você deseja jogar novamente?");
-	jogo.leitor=prompt("Digite [1] SIM ou [2] NÃO :");
+		console.log("Você deseja jogar novamente?");
+		jogo.leitor=prompt("Digite [1] SIM ou [2] NÃO :");
 
-	if(jogo.leitor>1){
-		jogo.controle++;
-		jogo.controle2++;
-	}
+		if(jogo.leitor>1){
+			jogo.controle++;
+			jogo.controle2++;
+		}
 
 
 	}while(jogo.controle==0);
