@@ -315,7 +315,8 @@ class Jogador {
 		prompt("Tecle ENTER para continuar:");// alterado hoje
 	    console.clear();	
 	
-		}while(jogo.controle==0)	
+		}while(jogo.controle==0);
+		jogo.controle = 0;	
 	}
 
 	// Função para utilizar, adicionar e excluir itens
