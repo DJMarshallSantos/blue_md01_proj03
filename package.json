@@ -1,4 +1,10 @@
 {
+  "name": "os-6-caminhos",
+  "version": "1.0.0",
+  "description": "Jogo RPG em Terminal",
+  "main": "script.js",
+  "author": "Grupo 3 (Felipe Santos/ Luis Couto/ Marcelo A Santos)- Classe 12 - Blue EdTech/2022",
+  
   "dependencies": {
     "prompt-sync": "^4.2.0"
   }
