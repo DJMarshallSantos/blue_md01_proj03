@@ -295,19 +295,19 @@ class Jogador {
 
 	status_geral(){
 		do{
-		console.log("--------------------Inventário---------------")
-		console.log(` Nome: ${jogador.nick} - Saúde: ${jogador.saude}`)
-		console.log("                                             ")
-		console.log(` Ataques:                                    `)
-		console.log(`[${jogador.ataque[0]}]-[${jogador.ataque[1]}]-[${jogador.ataque[2]}]`)
-		console.log("                                             ")
-		console.log(" itens:                                      ")
-		console.log(`{${jogador.iten[0]}] - [${jogador.iten[1]}] - [${jogador.iten[2]}]`)
-		console.log(`{${jogador.iten[3]}] - [${jogador.iten[4]}] - [${jogador.iten[5]}]`)
-		console.log(`                                   Ouro:[${jogador.ouro}]`)
-		console.log("_____________________________________________")
-		console.log("Para sair digite [1]");
-		jogo.leitor=prompt();
+			console.log("--------------------Inventário---------------");
+			console.log(` Nome: ${jogador.nick} - Saúde: ${jogador.saude}`);
+			console.log("                                             ");
+			console.log(` Ataques:                                    `);
+			console.log(`[${jogador.ataque[0]}]-[${jogador.ataque[1]}]-[${jogador.ataque[2]}]`);
+			console.log("                                             ");
+			console.log(" itens:                                      ");
+			console.log(`{${jogador.iten[0]}] - [${jogador.iten[1]}] - [${jogador.iten[2]}]`);
+			console.log(`{${jogador.iten[3]}] - [${jogador.iten[4]}] - [${jogador.iten[5]}]`);
+			console.log(`                                   Ouro:[${jogador.ouro}]`);
+			console.log("_____________________________________________");
+			console.log("Para sair digite [1]");
+			jogo.leitor=prompt();
 		
 		if(jogo.leitor>=1){
 			jogo.controle++;
@@ -452,19 +452,19 @@ class Jogador {
 			jogo.narrativa1();
 			ciclo.passTempo();
 			map.pass_local();			
-		}else if(ciclo.periodo==="noite" && map.armazena_local==="Trilha dos Centauros"){
+		}else if(ciclo.periodo==="Noite" && map.armazena_local==="Trilha dos Centauros"){
 			console.log("Uma cobra gigante se aproxima!");
 			ciclo.passTempo();
 			map.pass_local();
 			map.batalha(cobra_gigante);						
 		}else if(ciclo.periodo==="Tarde" && map.armazena_local==="Gruta da pedra cortante"
 		){
-			console.log("Um inimigo se aproxima!");
+			console.log("Um Lagarto Humanóide se aproxima!");
 			ciclo.passTempo();
 			map.pass_local();
 			map.batalha(lagarto_humanoide);
 		}else if(ciclo.periodo==="Tarde" && map.armazena_local==="Colina dos Carneiros"){
-				console.log("Um inimigo se aproxima!");
+				console.log("Um grupo de ladrões se aproxima!");
 				ciclo.passTempo();
 				map.pass_local();
 				map.batalha(grupo_de_ladrões);
@@ -490,7 +490,7 @@ class Jogador {
 		console.log("Você gostaria de tomar que atitude?");
 		console.log("[1] Para seguir viagem");
 		console.log("[2] para abrir Loja de bolso");
-		console.log("[3] para ver estatus geral")
+		console.log("[3] para ver estatus geral");
 		console.log("[4] para abrir a bolsa");
 		console.log("[5] para sair do jogo");
 		jogo.leitor = +prompt("Digite a opção desejada:");
